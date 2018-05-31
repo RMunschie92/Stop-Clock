@@ -45,7 +45,10 @@ class AlarmScene extends React.Component {
 
         let newDummy = this.state.dummy += 1
 
-        this.setState({ initialPosition: initialRegion, dummy: newDummy });
+        this.setState({
+          initialPosition: initialRegion,
+          dummy: newDummy
+        });
       },
       (error) => alert(error.message),
       { enableHighAccuracy: true, timeOut: 5000, maximumAge: 1000 }
@@ -65,7 +68,10 @@ class AlarmScene extends React.Component {
 
         let newDummy = this.state.dummy += 1
 
-        this.setState({ lastPosition: watchedPosition, dummy: newDummy });
+        this.setState({
+          lastPosition: watchedPosition,
+          dummy: newDummy
+        });
       },
       (error) => alert(error.message),
       { enableHighAccuracy: true, timeOut: 5000, maximumAge: 1000 }
